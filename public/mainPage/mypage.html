@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainPage/mypage.css">
+</head>
+<body>
+    <div id="logOutOverlay">    
+        <div class="overlay-container">
+            <div id="overlayTap-top" class="overlayTap-top">
+                <div id="overlayText" class="overlayText">
+                    로그아웃 하시겠습니까? <br>
+                </div>
+                <div id="overlayText-small" class="overlayText-small">
+                    서비스를 이용하기 위해 다시 로그인해야 합니다
+                </div>
+            </div>
+            <div id="overlayTap-bottom" class="overlayTap-bottom">
+                <button class="okBtn" onclick="logOutOK()">확인</button>
+            </div>
+            <button id= "xBtn" class="xBtn" onclick=hideOverlay()></button>
+        </div>
+    </div>
+
+    <div id="withdrawalOverlay">    
+        <div class="overlay-container">
+            <div id="overlayTap-top-withdrawa" class="overlayTap-top">
+                <div id="overlayText-withdrawa" class="overlayText">
+                    탈퇴 하시겠습니까? <br>
+                </div>
+                <div id="overlayText-small-withdrawa" class="overlayText-small">
+                    탈퇴하실 경우, 모든 그룹에서 추방되며 <br> 생성한 모든 그룹이 삭제됩니다
+                </div>
+            </div>
+            <div id="overlayTap-bottom-withdrawa" class="overlayTap-bottom">
+                <button class="okBtn" onclick="withdrawalOK()">확인</button>
+            </div>
+            <button id= "xBtn-withdrawa" class="xBtn" onclick=hideOverlay()></button>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="icon"></div>
+            <div class="text">TOGETHER</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="contentBox" class="roundedBox-content">
+            <div class="contentTopText">마이페이지</div>
+
+            <div class="userContainer">
+                <div class="userIcon"></div>
+                <button class="editButton" onclick="editUsername()"></button>
+            </div>
+            <div id="userName" class="contentText">UserName</div>
+
+            <div class="button-container">
+                <button class="button-dis" onclick="logOut()">로그아웃</button>
+                <div class="vertical-line"></div>
+                <button class="button-dis" onclick="withdrawal()">회원탈퇴</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-icons">
+            <a href="/mainPage/main.html" class="footer-icon"></a>
+            <a href="/mainPage/plus-group.html" class="footer-icon"></a>
+            <a href="/mainPage/mypage.html" class="footer-icon"></a>
+        </div> 
+    </div>
+
+    <div id="targetDiv">
+    </div>
+
+    <script src="/mainPage/mainPage.js"></script>
+</body>
+</html>

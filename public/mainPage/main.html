@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainPage/main.css">
+</head>
+<body>
+    <div id="management-overlay" class="management-overlay">
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="icon"></div>
+            <div class="text">TOGETHER</div>
+        </div>
+        <button class="management" onclick="managementOn()">관리</button>
+    </div>
+
+    <div class="content">
+        <div class="roundedBox-top">
+            <div class="button-container">
+                <button id="myGroupButton" class="box-button-select">내 그룹</button>
+                <div class="vertical-line"></div>
+                <button id="joinedGroupButton" class="box-button-dis">참여중인 그룹</button>
+            </div>
+        </div>
+        <div id="contentBox" class="roundedBox-content">
+            <div id="content-container">
+                <div id="groupText" class="contentText" style="display: none;">
+                    아직 참여 중인<br>
+                    그룹이 없어요
+                </div>
+                <div id="myGroupText" class="contentText" style="display: none;">
+                    아직 그룹을 <br>
+                    만들지 않았어요
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-icons">
+            <a href="/mainPage/main.html" class="footer-icon"></a>
+            <a href="/mainPage/plus-group.html" class="footer-icon"></a>
+            <a href="/mainPage/mypage.html" class="footer-icon"></a>
+        </div> 
+    </div>
+    <script src="/mainPage/mainPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+#groupCreate-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    display: none; 
+}
+
+#groupJoin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    display: none; 
+}
+
+#alterTap-create {
+    position: absolute;
+    display: none;
+    max-width: 298px;
+    max-height: 32px;
+    border-radius: 12.5px;
+    background: #FA9A84;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    padding: 7px 102px 7px 24px;
+    text-align: left;
+    color: #FFF;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 181px 31px 16px 31px;
+}
+
+#alterTap-join {
+    position: absolute;
+    display: none;
+    max-width: 298px;
+    max-height: 32px;
+    border-radius: 12.5px;
+    background: #FA9A84;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    padding: 7px 102px 7px 24px;
+    text-align: left;
+    color: #FFF;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 181px 31px 16px 31px;
+}
+
+.group-item {
+    margin: 0px 0px 22px 0px;
+}
+
+.rightArrow {
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 14px;
+    height: 24px;
+    flex-shrink: 0;
+    background-image: url('../asset/rightArrowBtn.svg');
+    background-position: center;
+}
+
+.overlay-container {
+    margin: 133px 32px;
+}
+
+.overlayTap-top {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 297px;
+    max-height: 56px;
+    flex-shrink: 0;
+    border-radius: 20px 20px 0px 0px;
+    background: #FA9A84;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    padding: 16px 24px;
+}
+
+.content-container {
+    padding: 24px;
+}
+
+.small-text {
+    color: #000;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title-text {
+    color: #000;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+
+.overlayTap-bottom {
+    max-width: 297px;
+    max-height: 91px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 20px 20px;
+    background: #F1E8D9;
+    padding: 24px 51px;
+}
+
+.ractangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 244px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+.overlay-plusIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-image: url('../asset/plusIcon_color.svg');
+    margin: 0px 16px 0px 0px;
+}
+
+.overlayTap-bottom {
+    max-width: 297px;
+    max-height: 318px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 20px 20px;
+    background: #F1E8D9;
+    padding: 24px 27px 29px 27px;
+}
+
+.overlayText {
+    color: #FFF;
+    text-align: left;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.overlayText-small {
+    margin: 0px 0px 8px 0px;
+    color: rgba(0, 0, 0, 0.25);
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.groupName-input {
+    color: #FA9A84;
+    width: 160px;
+    height: 45px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    padding: 0px 24px;
+}
+
+.groupCode-input {
+    color: #FA9A84;
+    width: 160px;
+    height: 45px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    padding: 0px 24px;
+}
+
+.groupIcon-container {
+    width: 250px;
+    height: 112px;
+}
+
+.btn-container {
+    margin: 12px 146px;
+    align-self: center;
+    max-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+}
+
+.xBtn {
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background-image: url('../asset/xBtn.svg');
+    background-position: center;
+}
+
+.checkBtn {
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background-image: url('../asset/checkBtn.svg');
+    background-position: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquare', sans-serif; 
+    background-color: #FA9A84;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F1E8D9;
+    display: flex;
+    align-items: center;
+    padding: 16px 0px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.header .icon {
+    background-image: url('../asset/togetherIcon_small.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 18.667px;
+    flex-shrink: 0;
+    margin-left: 24px;
+    margin-right: 8px;
+}
+
+.header .text {
+    color: #FA9A84;;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.content {
+    margin-top: 56px; 
+    padding: 16px;
+}
+
+.box-container {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0px 0px 8px 0px;;
+}
+
+.roundedBox-top {
+    width: 100%;
+    max-width: 160px;
+    background: #F1E8D9;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    height: 56px; 
+    border-radius: 25px; 
+}
+
+.roundedBox-top-container {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 20px 16px 20px;
+    gap: 17px;
+}
+
+.groupJoinIcon {
+    background-image: url('../asset/groupJoinIcon.svg'); 
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.groupPlusIcon {
+    background-image: url('../asset/groupPlusIcon.svg'); 
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.roundedBox-top-content {
+    align-items: center;
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    color: #FA9A84;
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+}
+
+.roundedBox-content {
+    width: 100%;
+    max-width: 328px;
+    background: #F1E8D9;
+    margin: 8px auto;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    height: 432px; 
+    border-radius: 20px; 
+}
+
+.contentTopText{
+    color: #000;
+    font-family: 'NanumSquare';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 24px 0px 0px 24px;
+}
+
+.contentText {
+    width: 250px;
+    height: 54px;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: 'NanumSquare';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 142px 39px 189px 39px;
+}
+
+.footer {
+    background: #F1E8D9;
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.20);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px; 
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-icon:nth-child(1) {
+    background-image: url('../asset/homeIcon_dis.svg'); 
+}
+
+.footer-icon:nth-child(2) {
+    background-image: url('../asset/plusIcon_act.svg'); 
+}
+
+.footer-icon:nth-child(3) {
+    background-image: url('../asset/mypageIcon_dis.svg'); 
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainPage/plus-group.css">
+</head>
+<body>
+    <div id="groupCreate-overlay" class="group-overlay">
+        <div id ="alterTap-create" style="margin: 85px 31px;">그룹 이름을 확인해주세요</div>
+        <div class="overlay-container"> 
+            <div id="overlay-create">
+                <div id="overlayTap-top-create" class="overlayTap-top">
+                    <div class="overlay-plusIcon"></div>
+                    <div class="overlayText">그룹 생성</div>
+                </div>
+                <div id="overlayTap-bottom-create" class="overlayTap-bottom">
+                    <div class="overlayText" style="color: black;">그룹 이름</div>
+                    <div class="overlayText-small">특수 문자, 띄어쓰기 포함 가능/최대 9글자</div>
+                    <div class="ractangle">
+                        <input id="groupName" class="groupName-input" placeholder="그룹 이름 입력"></input>
+                    </div>
+                    <div class="overlayText" style="color: black; margin: 20px 0px 0px 0px;">그룹 아이콘</div>
+                    <div class="groupIcon-container"></div>
+                </div>
+            </div>
+
+            <div id="overlay-create-ok" style="display: none; margin: 229px 0px 0px 0px">
+                <div class="overlayTap-top" style="display: block; justify-content: center;">
+                    <div class="overlayText" style="color: white; text-align: center; width: 224px; margin: 4px 13px 0px 13px "> 그룹 생성 완료! <br></div>
+                    <div class="overlayText-small" style="color: white; margin: 4px 0px 4px 0px; text-align: center;">친구들에게 초대 코드를 알려주세요</div>
+                </div>
+                <div class="overlayTap-bottom">
+                    <div id="invite-code" class="ractangle">999999</div>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button id= "xBtn-create" class="xBtn" onclick=groupOverlayHide()></button>
+                <button id= "checkBtn-create" class="checkBtn" onclick=groupCreate()></button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="groupJoin-overlay" class="group-overlay">
+        <div id ="alterTap-join">초대 코드를 확인해주세요</div>
+        <div class="overlay-container" style="margin: 229px 31px;"> 
+            <div id ="overlay-join">
+                <div id="overlayTap-top-join" class="overlayTap-top" style="padding: 18px 37px; justify-content: center;">
+                    <div id="codeText" class="overlayText" style="text-align: center;">호스트에게 받은<br>초대 코드를 입력해주세요</div>
+                </div>
+                <div id="overlayTap-bottom-join" class="overlayTap-bottom">
+                    <div id="codeRac" class="ractangle">
+                        <input type="text" id="groupCode" class="groupCode-input" placeholder="초대 코드 입력" required></input>
+                        <button class="rightArrow" onclick="groupJoin()"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="overlay-join-ok" style="display: none; margin: 229px 0px 0px 0px">
+                <div class="overlayTap-top" style="display: block; justify-content: center;">
+                    <div class="overlayText" style="color: white; text-align: center; width: 224px; margin: 4px 13px 0px 13px "> 그룹 참가 완료! <br></div>
+                    <div class="overlayText-small" style="color: white; margin: 4px 0px 4px 0px; text-align: center;">호스트의 승인을 기다려요</div>
+                </div>
+                <div class="overlayTap-bottom">
+                    <div id="myCode" class="ractangle"></div>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button id= "xBtn-create" class="xBtn" onclick=groupOverlayHide()></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="groupJoin-overlay" class="group-overlay">
+
+        <div class="btn-container">
+            <button id= "xBtn-join" class="xBtn" onclick=groupOverlayHide()></button>
+            <button id= "checkBtn-join" class="checkBtn" onclick=groupOverlayHide()></button>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="icon"></div>
+            <div class="text">TOGETHER</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="box-container">
+            <div class="roundedBox-top">
+                <div class="roundedBox-top-container">
+                    <div class="groupPlusIcon"></div>
+                    <button class="roundedBox-top-content" onclick="groupCreateOpen()">그룹 생성</button>
+                </div>
+            </div>
+            <div class="roundedBox-top">
+                <div class="roundedBox-top-container">
+                    <div class="groupJoinIcon"></div>
+                    <button class="roundedBox-top-content" onclick="groupJoinOpen()">그룹 참여</button>
+                </div>
+            </div>
+        </div>
+        <div id="contentBox" class="roundedBox-content">
+            <div class="contentTopText">승인 대기 중인 그룹</div>
+            <div id="content-container" class="content-container" style="padding: 0px;">
+            </div>
+            <div id="invite-contentText" class="contentText">
+                승인 대기 중인 <br>
+                그룹이 없어요
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-icons">
+            <a href="/mainPage/main.html" class="footer-icon"></a>
+            <a href="/mainPage/plus-group.html" class="footer-icon"></a>
+            <a href="/mainPage/mypage.html" class="footer-icon"></a>
+        </div> 
+    </div>
+    <script src="mainPage.js"></script>
+</body>
+</html>

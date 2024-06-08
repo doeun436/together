@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캘린더</title>
+    <link rel="stylesheet" href="dostyles.css">
+    <link rel="stylesheet" href="doglobals.css" />
+    <link rel="stylesheet" href="dostyleguide.css" />
+</head>
+
+
+<body>
+    <div class="android-small">
+    <div class="div">
+        
+        <div id="overlap-group">
+        <div id="calendar-first-header">
+        <button class="group-button" id="main-menu"></button>
+        <div class="group-css">그룹 이름</div>
+        <button class="members-button-css" id="members">멤버</button>
+        <button class="schedule-button-css" id="schedule-button">일정</button>
+        <button class="checklist-button-css" id="checklist-button">체크리스트</button>
+        <button class="calendar-button-css" id="calender-button">캘린더</button>
+        <div class="calendar-underline-css"></div>
+    </div>
+    </div>
+
+
+
+
+    <div class="overlap">
+        <img class="back-img" src="doimg/backimg-1.svg" />
+        <div class="body">
+
+     <div class="year-css" id="year"></div>
+
+     <div id="calendar-header">
+        <button id="prev-month" class="arrow left"></button>
+        <h2 class="monthcolor" id="month"></h2>
+        <button id="next-month" class="arrow right"></button>
+     </div>
+       
+      <div id="calendar-body">
+         <div id="days-of-week">
+            <span>월</span>
+            <span>화</span>
+            <span>수</span>
+            <span>목</span>
+            <span>금</span>
+            <span>토</span>
+            <span class="redday">일</span>
+            </div>
+           <div id="days"></div>
+         </div>
+         
+        <div id="current-date"></div>
+     
+     </div>
+    </div>
+
+
+</div>
+</div>
+    <script src="doscript.js"></script>
+
+
+</div>
+</div>
+</body>
+</html>

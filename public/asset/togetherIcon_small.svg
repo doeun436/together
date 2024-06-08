@@ -1,0 +1,24 @@
+<svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 8">
+<g id="Group 6">
+<rect id="Rectangle 21" x="4.2666" y="12.2666" width="0.533333" height="2.13333" rx="0.266667" fill="#FA9A84"/>
+<rect id="Rectangle 22" x="4.7998" y="11.7334" width="0.533333" height="2.13333" rx="0.266667" fill="#FA9A84"/>
+<rect id="Rectangle 20" x="1.6001" y="9.6001" width="6.4" height="9.06667" rx="2" fill="#FA9A84"/>
+<path id="Vector 1" d="M0 9.71377C0 12.022 1.12593 13.2402 1.68889 13.5608C3.37778 13.5608 6.39153 14.249 7.6 13.5608C9.28889 12.5991 9.86667 10.9334 10.2837 9.71377C10.505 9.0667 11.03 8.13337 11.7333 7.73337C11.7333 6.93337 10.7137 6.80642 10.2837 6.93337C9.71731 7.10062 9.07425 8.53337 8.8 8.53337C8.12444 8.53337 8 6.50788 8 5.8667L0 7.79023V9.71377Z" fill="#FA9A84"/>
+<rect id="Rectangle 23" y="3.7334" width="1.6" height="4.8" rx="0.8" fill="#FA9A84"/>
+<rect id="Rectangle 24" x="2.1333" y="1.06665" width="1.6" height="7.46667" rx="0.8" fill="#FA9A84"/>
+<rect id="Rectangle 25" x="4.2666" width="1.6" height="8.53333" rx="0.8" fill="#FA9A84"/>
+<rect id="Rectangle 26" x="6.3999" y="1.06665" width="1.6" height="5.86667" rx="0.8" fill="#FA9A84"/>
+</g>
+<g id="Group 7">
+<rect id="Rectangle 21_2" width="0.533333" height="2.13333" rx="0.266667" transform="matrix(-1 0 0 1 19.7334 12.2666)" fill="#FA9A84"/>
+<rect id="Rectangle 22_2" width="0.533333" height="2.13333" rx="0.266667" transform="matrix(-1 0 0 1 19.2002 11.7334)" fill="#FA9A84"/>
+<rect id="Rectangle 20_2" width="6.4" height="9.06667" rx="2" transform="matrix(-1 0 0 1 22.3999 9.6001)" fill="#FA9A84"/>
+<path id="Vector 1_2" d="M24 9.71377C24 12.022 22.8741 13.2402 22.3111 13.5608C20.6222 13.5608 17.6085 14.249 16.4 13.5608C14.7111 12.5991 14.1333 10.9334 13.7163 9.71377C13.495 9.0667 12.97 8.13337 12.2667 7.73337C12.2667 6.93337 13.2863 6.80642 13.7163 6.93337C14.2827 7.10062 14.9257 8.53337 15.2 8.53337C15.8756 8.53337 16 6.50788 16 5.8667L24 7.79023V9.71377Z" fill="#FA9A84"/>
+<rect id="Rectangle 23_2" width="1.6" height="4.8" rx="0.8" transform="matrix(-1 0 0 1 24 3.7334)" fill="#FA9A84"/>
+<rect id="Rectangle 24_2" width="1.6" height="7.46667" rx="0.8" transform="matrix(-1 0 0 1 21.8667 1.06665)" fill="#FA9A84"/>
+<rect id="Rectangle 25_2" width="1.6" height="8.53333" rx="0.8" transform="matrix(-1 0 0 1 19.7334 0)" fill="#FA9A84"/>
+<rect id="Rectangle 26_2" width="1.6" height="5.86667" rx="0.8" transform="matrix(-1 0 0 1 17.6001 1.06665)" fill="#FA9A84"/>
+</g>
+</g>
+</svg>

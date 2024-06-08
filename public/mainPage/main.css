@@ -1,0 +1,251 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquare', sans-serif; 
+    background-color: #FA9A84;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F1E8D9;
+    display: flex;
+    align-items: center;
+    padding: 16px 0px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.group-item {
+    padding: 24px;
+    margin: 0px 0px 22px 0px;
+}
+
+.text-container {
+    float: left;
+}
+
+.small-text {
+    color: #000;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title-text {
+    color: #000;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.bigXBtn {
+    display: none;
+    float: right;
+    line-height: normal;
+    cursor: pointer;
+    border: none;
+    background: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../asset/bigXBtn.svg'); 
+    width: 18.712px;
+    height: 32px;
+    flex-shrink: 0;
+    margin: 8px 0px 6px 0px;
+}
+
+.rightArrow-icon {
+    float: right;
+    line-height: normal;
+    cursor: pointer;
+    border: none;
+    background: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../asset/rightArrowBtn.svg'); 
+    width: 18.712px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.management-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 5000; 
+    display: none; 
+}
+
+.management {
+    float: right;
+    margin: 0px 16px 0px 0px;
+    line-height: normal;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: rgba(0, 0, 0, 0.25);
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.header .icon {
+    background-image: url('../asset/togetherIcon_small.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 18.667px;
+    flex-shrink: 0;
+    margin-left: 24px;
+    margin-right: 8px;
+}
+
+.header .text {
+    color: #FA9A84;;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.content {
+    margin-top: 56px; 
+    padding: 16px;
+}
+
+.roundedBox-top {
+    width: 100%;
+    max-width: 328px;
+    background: #F1E8D9;
+    margin: 0px 0px 8px 0px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    height: 56px; 
+    border-radius: 25px; 
+    z-index: 9999;
+}
+
+.roundedBox-content {
+    position: fixed;
+    width: 100%;
+    max-width: 328px;
+    background: #F1E8D9;
+    margin: 0px 0px 8px 0px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    height: 432px; 
+    border-radius: 20px; 
+    z-index: 9999;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 9px 0px;
+    gap: 32px
+}
+
+.box-button-select {
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.box-button-dis {
+    color: rgba(0, 0, 0, 0.25);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.vertical-line {
+    width: 1.5px;
+    height: 37px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+    background: #F1E8D9;
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.20);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px; 
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-icon:nth-child(1) {
+    background-image: url('../asset/homeIcon_act.svg'); 
+}
+
+.footer-icon:nth-child(2) {
+    background-image: url('../asset/plusIcon_dis.svg'); 
+}
+
+.footer-icon:nth-child(3) {
+    background-image: url('../asset/mypageIcon_dis.svg'); 
+}
+
+.contentText {
+    width: 250px;
+    height: 54px;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: 'NanumSquare';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 189px 39px;
+}

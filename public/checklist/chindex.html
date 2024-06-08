@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/checklist/chstyle.css" />
+    <link rel="stylesheet" href="/checklist/chstyleguide.css" />
+    <link rel="stylesheet" href="/checklist/chglobals.css" />
+    <script src="/checklist/chscript.js"></script>
+    <title>Responsive Design</title>
+  </head>
+  <body>
+    <div class="container android-small">
+      <div class="div">
+        <div class="overlap">
+          <div class="rectangle">
+            <div id="checklist-container" class="checklist-container"></div>
+            <div class="plus-icon-container">
+              <div class="plus-icon" onclick="openModal()">
+                <img src="/checklist/img/plusicon.png" alt="추가" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlap-2">
+          <div class="text-wrapper">그룹 이름</div>
+          <div
+            class="left-arrow-btn"
+            style="background-image: url('/checklist/img/subtract.svg')"
+          ></div>
+          <div class="select-bar"></div>
+          <div class="text-wrapper-2">일정</div>
+          <div class="text-wrapper-3">체크리스트</div>
+          <div class="text-wrapper-4">캘린더</div>
+          <div class="text-wrapper-5" onclick="openManagementModal()">관리</div>
+          <div class="text-wrapper-6" onclick="openMemberModal()">멤버</div>
+          <img class="line" src="/checklist/img/line.svg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Checklist Modal Content -->
+    <div id="checklist-modal" class="modal" style="display: none">
+      <div class="modal-container">
+        <div class="modal-header">
+          <span>체크리스트 생성</span>
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-content">
+          <div class="tab">
+            <button
+              class="tablinks active"
+              onclick="openTab(event, 'personal')"
+            >
+              개인
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'shared')">
+              공용
+            </button>
+          </div>
+          <div id="personal" class="tabcontent" style="display: block">
+            <label for="personal-checklist-name">체크리스트 이름</label>
+            <input
+              type="text"
+              id="personal-checklist-name"
+              name="personal-checklist-name"
+              maxlength="9"
+              placeholder="체크리스트 이름 입력"
+            />
+            <label for="personal-checklist-memo">체크리스트 메모</label>
+            <input
+              type="text"
+              id="personal-checklist-memo"
+              name="personal-checklist-memo"
+              maxlength="16"
+              placeholder="체크리스트 메모 입력"
+            />
+          </div>
+          <div id="shared" class="tabcontent">
+            <label for="shared-checklist-name">체크리스트 이름</label>
+            <input
+              type="text"
+              id="shared-checklist-name"
+              name="shared-checklist-name"
+              maxlength="9"
+              placeholder="체크리스트 이름 입력"
+            />
+            <label for="shared-checklist-memo">체크리스트 메모</label>
+            <input
+              type="text"
+              id="shared-checklist-memo"
+              name="shared-checklist-memo"
+              maxlength="16"
+              placeholder="체크리스트 메모 입력"
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <img
+            src="/checklist/img/checkbtn1.svg"
+            class="save-btn"
+            onclick="saveChecklist()"
+            alt="저장"
+          />
+          <img
+            src="/checklist/img/xbtn.svg"
+            class="cancel-btn"
+            onclick="closeModal()"
+            alt="취소"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Management Modal Content -->
+    <div id="management-modal" class="modal" style="display: none">
+      <div class="modal-container">
+        <div class="modal-header">
+          <span>체크리스트 관리</span>
+          <button class="close-management-btn" onclick="closeManagementModal()">
+            관리 마침 &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div
+            id="checklist-management-container"
+            class="checklist-container"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member Modal Content -->
+    <div id="member-modal" class="modal" style="display: none">
+      <div class="modal-container">
+        <div class="modal-header">
+          <span>멤버</span>
+          <span class="close-btn" onclick="closeMemberModal()">&times;</span>
+        </div>
+        <div class="modal-content">
+          <p>아직 참여한 멤버가 없습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="close-btn" onclick="closeMemberModal()">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/checklist/chscript.js"></script>
+  </body>
+</html>
