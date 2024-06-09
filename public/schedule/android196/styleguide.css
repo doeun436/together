@@ -1,0 +1,15 @@
+:root {
+  --20pt-exbold-font-family: "NanumSquareOTF", Helvetica;
+  --20pt-exbold-font-weight: 800;
+  --20pt-exbold-font-size: 20px;
+  --20pt-exbold-letter-spacing: 0px;
+  --20pt-exbold-line-height: normal;
+  --20pt-exbold-font-style: normal;
+  --16pt-exbold-font-family: "NanumSquareOTF", Helvetica;
+  --16pt-exbold-font-weight: 800;
+  --16pt-exbold-font-size: 16px;
+  --16pt-exbold-letter-spacing: 0px;
+  --16pt-exbold-line-height: normal;
+  --16pt-exbold-font-style: normal;
+  --default-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+}

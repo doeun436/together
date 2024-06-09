@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="android-small">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <img class="back-img" src="img/backimg.svg" />
+          <div class="group-top-tap"></div>
+          <div class="text-wrapper">그룹 이름</div>
+          <div class="left-arrow-btn"></div>
+          <div class="select-bar"></div>
+          <div class="div">일정</div>
+          <div class="text-wrapper-2">체크리스트</div>
+          <div class="text-wrapper-3">캘린더</div>
+          <div class="rectangle"></div>
+          <div class="plus-icon">
+            <div class="overlap-group">
+              <div class="rectangle-2"></div>
+              <div class="rectangle-3"></div>
+            </div>
+          </div>
+          <div class="text-wrapper-4">관리</div>
+          <div class="text-wrapper-5">멤버</div>
+          <img class="line" src="img/line.svg" />
+          <div class="screen"></div>
+          <img class="vector" src="img/vector.png" />
+          <div class="text-wrapper-6">일정 생성</div>
+          <div class="plusbtn-lightver">
+            <div class="overlap-group">
+              <div class="rectangle-4"></div>
+              <div class="rectangle-5"></div>
+            </div>
+          </div>
+          <div class="text-wrapper-7">일정 이름</div>
+          <p class="p">특수 문자, 띄어쓰기 포함 가능/최대 14글자</p>
+          <div class="name-input">
+            <div class="div-wrapper"><div class="text-wrapper-8">일정 이름 입력</div></div>
+          </div>
+          <div class="text-wrapper-9">일정 범위</div>
+          <div class="text-wrapper-10">그룹원들이 투표할 범위를 설정해주세요</div>
+          <div class="startdate-check" id="startdate">
+            <div class="text-wrapper-11">시작 날짜</div>
+            <div class="check-icon"><img class="subtract" src="img/subtract-2.svg" /></div>
+          </div>
+          <div class="endtime-select">
+            <div class="text-wrapper-12">끝 시간</div>
+            <div class="warning-icon"><img class="img" src="img/image.svg" /></div>
+          </div>
+          <div class="enddate-check" id="enddate">
+            <div class="text-wrapper-11">끝 날짜</div>
+            <div class="check-icon"><img class="subtract" src="img/subtract-2.svg" /></div>
+          </div>
+          <div class="starttime-check" id="starttime">
+            <div class="text-wrapper-11">시작 시간</div>
+            <div class="check-icon"><img class="subtract" src="img/subtract-2.svg" /></div>
+          </div>
+          <div class="group">
+            <div class="overlap-2">
+              <iframe src="./timepicker.html" title="Description of the iframe" style="width: 100%; height: 100%; border-radius: 10px;"></iframe>
+            </div>
+          </div>
+          <img id="v" class="check-btn" src="img/checkbtn.svg" />
+          <img id="x" class="x-btn" src="img/xbtn-1.svg" />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('startdate').addEventListener('click', function() {
+          window.location.href = '../android180/index.html';
+      });
+    </script>
+    <script>
+      document.getElementById('enddate').addEventListener('click', function() {
+          window.location.href = '../android179/index.html';
+      });
+    </script>
+    <script>
+      document.getElementById('starttime').addEventListener('click', function() {
+          window.location.href = '../android181/index.html';
+      });
+    </script>
+    <script>
+      document.getElementById('x').addEventListener('click', function() {
+          window.location.href = '../android178/index.html';
+      });
+    </script>
+    <script>
+      document.getElementById('v').addEventListener('click', function() {
+          window.location.href = '../android183/index.html';
+      });
+    </script>    
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 앤 드래그 가능한 격자 표</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 7개의 가로 칸 */
+            grid-template-rows: repeat(20, 1fr); /* 20개의 세로 칸 */
+            gap: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .grid-item {
+            background-color: #fa9a84; /* 연한 빨간색 */
+            border: 1px solid black;
+            border-top-style: hidden; /* 상단 테두리 없애기 */
+            border-bottom-style: hidden; /* 하단 테두리 없애기 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .grid-item.selected {
+            background-color: #32CD32; /* 초록색 */
+        }
+
+        .grid-item.dotted {
+            border-top: 1.3px dashed black; /* 1.3배 더 두껍게 설정 */
+            border-bottom: 1.3px dashed black; /* 1.3배 더 두껍게 설정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container" id="grid-container">
+        <!-- 그리드 아이템들이 여기 추가됩니다 -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gridContainer = document.getElementById('grid-container');
+            let isMouseDown = false;
+
+            // 7x20 그리드를 만듭니다.
+            for (let i = 0; i < 140; i++) { // 총 140개의 그리드 아이템 생성 (7 * 20)
+                const gridItem = document.createElement('div');
+                gridItem.classList.add('grid-item');
+                
+                // 짝수 행에 점선 스타일을 추가합니다.
+                if (Math.floor(i / 7) % 2 === 1) {
+                    gridItem.classList.add('dotted');
+                }
+
+                gridItem.addEventListener('mousedown', function () {
+                    isMouseDown = true;
+                    gridItem.classList.toggle('selected');
+                });
+
+                gridItem.addEventListener('mouseover', function () {
+                    if (isMouseDown) {
+                        gridItem.classList.add('selected');
+                    }
+                });
+
+                gridItem.addEventListener('mouseup', function () {
+                    isMouseDown = false;
+                });
+
+                gridContainer.appendChild(gridItem);
+            }
+
+            // 마우스 버튼을 놓을 때 isMouseDown을 false로 설정합니다.
+            document.addEventListener('mouseup', function () {
+                isMouseDown = false;
+            });
+
+            // 마우스가 그리드 밖으로 나갈 때 isMouseDown을 false로 설정합니다.
+            gridContainer.addEventListener('mouseleave', function () {
+                isMouseDown = false;
+            });
+        });
+    </script>
+</body>
+</html>

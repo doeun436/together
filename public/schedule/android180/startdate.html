@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 스크롤 날짜 선택기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 1.15em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            
+        }
+
+        .date-picker {
+            width: 200px;
+            height: 160px;
+            overflow-y: scroll;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .date-item {
+            padding: 5px 0;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .date-item.active {
+            color: black;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .date-item:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="date-picker" id="date-picker1">
+        <!-- 동적으로 날짜가 추가됩니다 -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const datePicker = document.getElementById('date-picker1');
+            let currentDate = new Date();
+
+            function formatDate(date) {
+                const options = {  month: '2-digit', day: '2-digit', weekday: 'short' };
+                return date.toLocaleDateString('ko-KR', options);
+            }
+
+            function addDates(startDate, numberOfDays) {
+                for (let i = 0; i < numberOfDays; i++) {
+                    const dateItem = document.createElement('div');
+                    dateItem.className = 'date-item';
+                    dateItem.textContent = formatDate(startDate);
+                    datePicker.appendChild(dateItem);
+                    startDate.setDate(startDate.getDate() + 1);
+                }
+                currentDate = startDate;
+                addClickEvent();
+            }
+
+            function addClickEvent() {
+                const dateItems = document.querySelectorAll('.date-item');
+                dateItems.forEach(item => {
+                    item.addEventListener('click', function () {
+                        dateItems.forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+                        // 선택된 날짜를 로컬 스토리지에 저장
+                        localStorage.setItem('selectedDate1', item.textContent);
+                        
+                    });
+                });
+            }
+
+            datePicker.addEventListener('scroll', function () {
+                if (datePicker.scrollTop + datePicker.clientHeight >= datePicker.scrollHeight) {
+                    addDates(currentDate, 10);
+                }
+            });
+
+            // 초기 날짜 추가
+            addDates(currentDate, 30);
+        });
+    </script>
+</body>
+</html>

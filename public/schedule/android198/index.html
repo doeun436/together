@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="android-small">
+      <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+          <img class="back-img" src="img/backimg.svg" />
+          <div class="group-top-tap"></div>
+          <div class="text-wrapper">그룹 이름</div>
+          <div class="left-arrow-btn"></div>
+          <div class="select-bar"></div>
+          <div class="div">일정</div>
+          <div class="text-wrapper-2">체크리스트</div>
+          <div class="text-wrapper-3">캘린더</div>
+          <div class="screen"></div>
+          <div class="rectangle"></div>
+          <img id="remove" class="big-x-btn" src="img/bigxbtn.svg" />
+          <div class="text-wrapper-4">관리</div>
+          <div class="text-wrapper-5">멤버</div>
+          <img class="line" src="img/line.svg" />
+          <div class="group" id="target">
+            <div class="group-2">
+              <div class="text-wrapper-6">일정 이름</div>
+              <div class="element">01-01&nbsp;&nbsp;00:00 ~ 01:30</div>
+            </div>
+            <img class="check-icon" src="img/checkicon-1.svg" />
+          </div>
+          <div class="lightbtn-small"></div>
+          <div class="text-wrapper-7">관리 마침</div>
+          <img id="x" class="xbtn-color" src="img/xbtn-color.svg" />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('x').addEventListener('click', function() {
+          window.location.href = '../android196/index.html';
+      });
+    </script>
+    <script>
+      document.getElementById('remove').addEventListener('click', function() {
+          var element1 = document.getElementById('target');
+          var element2 = document.getElementById('remove');
+          if (element1) {
+                element1.remove();
+          }
+          if (element2) {
+                element2.remove();
+          }
+      });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.time-display {
+    font-size: 24px; /* 글씨 크기를 줄였습니다. */
+    margin-bottom: 7px;
+}
+
+.time-display span {
+    cursor: pointer;
+}
+
+.time-picker {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-picker-container {
+    display: flex;
+}
+
+.time-picker-column {
+    margin: 0 10px;
+    overflow-y: auto;
+    height: 100px; /* 높이를 절반으로 줄였습니다. */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.time-picker-option {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px; /* 여기서 글씨 크기를 조정할 수 있습니다. */
+}
+
+.time-picker-option:hover {
+    background-color: #f0f0f0;
+}
+
+.time-picker-option.selected {
+    background-color: #007bff;
+    color: white;
+}

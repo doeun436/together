@@ -1,5 +1,42 @@
 const br = document.createElement('br');
 
+// 회원가입
+function signUp() {
+    alert('사용자 매뉴얼의 테스트 아이디로 로그인해주세요.');
+}
+
+// 로그인 
+function login() {
+    window.location.href = './loginPage.html';
+}
+
+// 회원가입 버튼
+if (window.location.href.includes("loginPage.html")) {
+    document.getElementById('signUpBtn').addEventListener('click', function() {
+        alert('사용자 매뉴얼의 테스트 아이디로 로그인해주세요.');
+    });
+}
+
+// 로그인 버튼
+function loginOK() {
+    const uid = document.getElementById('uid').value;
+    const password = document.getElementById('password').value;
+
+    if (uid != 'test123') {
+        alert('존재하지 않는 아이디입니다');
+        document.getElementById('alter').innerText = '아이디를 확인해주세요 !'
+        document.getElementById('uid').value = '';
+        document.getElementById('password').value = '';
+    } else if (password != 'test123!') {
+        alert('비밀번호가 맞지 않습니다');
+        document.getElementById('alter').innerText = '비밀번호를 확인해주세요 !'
+        document.getElementById('uid').value = '';
+        document.getElementById('password').value = '';
+    } else if(uid == 'test123' && password =='test123!') {
+        window.location.href = './main.html';
+    }
+}
+
 // 유저 이름 로드
 function loadUserName() {
     fetch('/get-username')
@@ -40,7 +77,7 @@ function loadGroups() {
                     `<div class="text-container">
                     <div class="small-text">초대 코드: ${group.inviteCode}</div>
                     <div class="title-text">그룹 이름: ${group.groupName}</div></div>
-                    <button class="rightArrow-icon"></button> 
+                    <button class="rightArrow-icon" onclick=groupOpen(${group.inviteCode})></button> 
                     <button class="bigXBtn" onclick="groupDelete(event)"></button>`;
                     container.appendChild(groupElement);
                 });
@@ -49,6 +86,30 @@ function loadGroups() {
         .catch(error => {
             console.error('Error:', error);
         });
+}
+
+// 클릭한 그룹으로 이동 (현재 이용중인 그룹의 코드 저장)
+function groupOpen(code){
+    fetch("/save-code", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ code })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log("초대 코드가 성공적으로 저장되었습니다.");
+        } else {
+            alert("초대 코드 저장에 실패했습니다: " + data.error);
+        }
+    })
+    .catch(error => {
+        console.error("오류 발생:", error);
+        alert("서버와의 통신 중 오류가 발생했습니다.");
+    });
+    window.location.href = '../schedule/android178/index.html';
 }
 
 // 승인 대기 중인 그룹 목록 로드
@@ -92,9 +153,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.href.includes("main.html")) {
         loadGroups();
         
+        var group = document.getElementsByClassName('group-item');
         document.getElementById('myGroupButton').addEventListener('click', function() {
 
         document.getElementById('groupText').style.display = 'none';
+
+        for(var i = 0; i < group.length; i++ ){
+            var groups = group.item(i);
+            groups.style.display = "block";
+        }
+
         this.classList.add('box-button-select');
         this.classList.remove('box-button-dis');
     
@@ -104,6 +172,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.getElementById('joinedGroupButton').addEventListener('click', function() {
             document.getElementById('groupText').style.display = 'block';
+            
+            for(var j = 0; j < group.length; j++ ){
+                var groups = group.item(j);
+                groups.style.display = "none";
+            }
         
             this.classList.add('box-button-select');
             this.classList.remove('box-button-dis');
@@ -408,6 +481,25 @@ function managementOn() {
     for(var j = 0; j < xBtn.length; j++ ){
         var xBtnItem = xBtn.item(j);
         xBtnItem.style.display = "block";
+    }
+}
+
+// 관리 모드 해제
+function managementOff() {
+    document.getElementById('management-overlay').style.display = 'none';
+
+    // 그룹 이동 버튼 생성
+    var rightArrow = document.getElementsByClassName('rightArrow-icon');
+    for( var i = 0; i < rightArrow.length; i++ ){
+        var rightArrowItem = rightArrow.item(i);
+        rightArrowItem.style.display = "block";
+    }
+
+    // 그룹 제거 버튼 제거
+    var xBtn = document.getElementsByClassName('bigXBtn');
+    for(var j = 0; j < xBtn.length; j++ ){
+        var xBtnItem = xBtn.item(j);
+        xBtnItem.style.display = "none";
     }
 }
 

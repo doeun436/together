@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/checklist/chstyleguide.css" />
     <link rel="stylesheet" href="/checklist/chglobals.css" />
     <script src="/checklist/chscript.js"></script>
-    <title>Responsive Design</title>
   </head>
   <body>
     <div class="container android-small">
@@ -25,13 +24,14 @@
         <div class="overlap-2">
           <div class="text-wrapper">그룹 이름</div>
           <div
+            id ="main-menu"
             class="left-arrow-btn"
             style="background-image: url('/checklist/img/subtract.svg')"
           ></div>
           <div class="select-bar"></div>
-          <div class="text-wrapper-2">일정</div>
+          <div id="schedule" class="text-wrapper-2">일정</div>
           <div class="text-wrapper-3">체크리스트</div>
-          <div class="text-wrapper-4">캘린더</div>
+          <div id="calendar" class="text-wrapper-4">캘린더</div>
           <div class="text-wrapper-5" onclick="openManagementModal()">관리</div>
           <div class="text-wrapper-6" onclick="openMemberModal()">멤버</div>
           <img class="line" src="/checklist/img/line.svg" />

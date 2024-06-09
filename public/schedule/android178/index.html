@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="android-small">
+      <div class="div">
+        <div class="overlap">
+          <img class="back-img" src="img/backimg.svg" />
+          <div class="rectangle"></div>
+          <div class="plus-icon">
+            <div class="overlap-group" id="clickableImage">
+              <div class="rectangle-2"></div>
+              <div class="rectangle-3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlap-2">
+          <div class="text-wrapper">그룹 이름</div>
+          <div id="main-menu" class="left-arrow-btn"></div>
+          <div class="select-bar"></div>
+          <div class="text-wrapper-2">일정</div>
+          <div id="checklist" class="text-wrapper-3">체크리스트</div>
+          <div id="calendar" class="text-wrapper-4">캘린더</div>
+          <div class="text-wrapper-5">관리</div>
+          <div class="text-wrapper-6">멤버</div>
+          <img class="line" src="img/line.svg" />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('clickableImage').addEventListener('click', function() {
+          window.location.href = '../android180/index.html';
+      });
+
+      // 체크리스트 화면으로 이동
+      document.getElementById('checklist').addEventListener('click', function() {
+        window.location.href = '../../checklist/chindex.html';
+      });
+
+      // 캘린더 화면으로 이동
+      document.getElementById('calendar').addEventListener('click', function() {
+        window.location.href = '../../calendar/doindex.html';
+      });
+      
+      // 그룹 옆 < 버튼 클릭시 메인메뉴로 이동
+      document.getElementById("main-menu").addEventListener("click", function() {
+        window.location.href = '../../mainPage/main.html';
+    });
+    </script>
+  </body>
+</html>

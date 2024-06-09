@@ -6,7 +6,6 @@ const app = express();
 const port = 3000;
 const fs = require("fs");
 
-// Serve the index.html file for the root route
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "mainPage", "index.html"));
 });
@@ -28,7 +27,6 @@ app.use(
   express.static(path.join(__dirname, "public", "mainPage"))
 );
 
-// Static files middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/asset", express.static(path.join(__dirname, "public", "asset")));
 app.use("/scripts", express.static(path.join(__dirname, "public", "scripts")));
@@ -37,6 +35,7 @@ app.use(cors());
 app.use(express.json());
 
 // JSON 데이터를 저장할 파일 경로
+const invite_dataFilePath = path.join(__dirname, "data", "invite_data.json"); 
 const group_dataFilePath = path.join(__dirname, "data", "groups.json");
 const user_dataFilePath = path.join(__dirname, "data", "user.json");
 const DATA_FILE = path.join(__dirname, "data", "checklists.json");
@@ -59,6 +58,11 @@ if (!fs.existsSync(path.dirname(invite_group_dataFilePath))) {
   fs.mkdirSync(path.dirname(invite_group_dataFilePath), { recursive: true });
 }
 
+if (!fs.existsSync(path.dirname(invite_dataFilePath))) {
+  fs.mkdirSync(path.dirname(invite_dataFilePath), { recursive: true });
+}
+
+
 // JSON 파일이 없으면 빈 배열로 초기화
 if (!fs.existsSync(group_dataFilePath)) {
   fs.writeFileSync(group_dataFilePath, JSON.stringify([]));
@@ -70,6 +74,10 @@ if (!fs.existsSync(user_dataFilePath)) {
 
 if (!fs.existsSync(invite_group_dataFilePath)) {
   fs.writeFileSync(invite_group_dataFilePath, JSON.stringify([]));
+}
+
+if (!fs.existsSync(invite_dataFilePath)) {
+  fs.writeFileSync(invite_dataFilePath, JSON.stringify([]));
 }
 
 if (!fs.existsSync(DATA_FILE)) {
@@ -146,6 +154,30 @@ app.post("/save-username", (req, res) => {
     res
       .status(500)
       .json({ success: false, error: "사용자 이름 저장 중 오류 발생" });
+  }
+});
+
+app.post("/save-code", (req, res) => {
+  const newInviteCode = req.body; // 요청에서 초대 코드 추출
+
+  try {
+    // 초대 코드 데이터 파일에서 데이터 읽기
+    let inviteData = JSON.parse(fs.readFileSync(invite_dataFilePath, "utf8"));
+
+    // 새로운 초대 코드로 업데이트
+    inviteData.inviteCode = newInviteCode;
+
+    // 업데이트된 초대 코드 데이터를 파일에 쓰기
+    fs.writeFileSync(invite_dataFilePath, JSON.stringify(inviteData.inviteCode));
+
+    // 클라이언트에 성공 응답 보내기
+    res.json({ success: true, inviteCode: newInviteCode });
+  } catch (error) {
+    console.error("초대 코드 저장 중 오류:", error);
+    // 클라이언트에 오류 응답 보내기
+    res
+      .status(500)
+      .json({ success: false, error: "초대 코드 저장 중 오류 발생" });
   }
 });
 

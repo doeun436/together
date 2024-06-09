@@ -1,0 +1,191 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquare', sans-serif; 
+    background-color: #FA9A84;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F1E8D9;
+    display: flex;
+    align-items: center;
+    padding: 16px 0px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.group-item {
+    padding: 24px;
+    margin: 0px 0px 22px 0px;
+}
+
+.text-container {
+    float: left;
+}
+
+.small-text {
+    padding: 4px 38px 0px 38px;
+    color: rgba(0, 0, 0, 0.25);
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0px 10px 0px;
+    color: #000;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.header .icon {
+    background-image: url('../asset/togetherIcon_small.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 18.667px;
+    flex-shrink: 0;
+    margin-left: 24px;
+    margin-right: 8px;
+}
+
+.header .text {
+    color: #FA9A84;;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.content {
+    margin-top: 56px; 
+    padding: 16px;
+}
+
+.roundedBox-top {
+    width: 100%;
+    max-width: 328px;
+    background: #F1E8D9;
+    margin: 0px 0px 8px 0px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    height: 56px; 
+    border-radius: 25px; 
+    z-index: 9999;
+}
+
+.roundedBox-content {
+    width: 328px;
+    height: 416px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #F1E8D9;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 9px 0px;
+    gap: 32px
+}
+
+.box-button-select {
+    line-height: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.box-button-dis {
+    color: rgba(0, 0, 0, 0.25);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.vertical-line {
+    width: 1.5px;
+    height: 37px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.topText {
+    padding: 38px 38px 0px 38px;
+    color: #000;
+    font-family: 'NanumSquare';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.ractangle {
+    margin: 8px 38px 16px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 244px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+.input {
+    color: #FA9A84;
+    width: 160px;
+    height: 45px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    font-family: 'NanumSquare', sans-serif; 
+    font-size: 20px;
+    padding: 0px 24px;
+}
+
+.okBtn {
+    width: 196px;
+    height: 40px;
+    flex-shrink: 0;
+    background: none;
+    background-image: url('../asset/colorBtn.svg');
+    border: none;
+    margin: 30px 66px;
+    color: #F1E8D9;
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}

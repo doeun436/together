@@ -271,3 +271,17 @@ function checkChecklistCount() {
       }
     });
 }
+
+  // 일정 화면으로 이동
+  document.getElementById('schedule').addEventListener('click', function() {
+    window.location.href = '../../schedule/android178/index.html';
+  });
+
+  // 캘린더 화면으로 이동
+  document.getElementById('calendar').addEventListener('click', function() {
+    window.location.href = '../../calendar/doindex.html';
+  });
+
+  document.getElementById("main-menu").addEventListener("click", function() {
+    window.location.href = '../../mainPage/main.html';
+});

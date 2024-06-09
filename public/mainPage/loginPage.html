@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainPage/loginPage.css">
+</head>
+<body>
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="icon"></div>
+            <div class="text">TOGETHER</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="roundedBox-top">
+            <div class="button-container">
+                <button id="signUpBtn" class="box-button-dis">회원가입</button>
+                <div class="vertical-line"></div>
+                <button id="loginBtn" class="box-button-select">로그인</button>
+            </div>
+        </div>
+
+        <div id="contentBox" class="roundedBox-content">
+            <div class="topText">아이디</div>
+            <div class="small-text">영어, 숫자 혼합</div>
+            <div class="ractangle">
+                <input id="uid" class="input" placeholder="아이디 입력">
+            </div>
+            <div class="topText">비밀번호</div>
+            <div class="small-text">영어, 숫자, 특수문자 혼합</div>
+            <div class="ractangle">
+                <input type="password" id="password" class="input" placeholder="비밀번호 입력">
+            </div>
+            <button class="okBtn" onclick="loginOK()">확인</button>
+        </div>
+
+        <div class="roundedBox-top" style="margin: 8px 0px;">
+            <div class="title-text" id="alter">
+                확인 버튼을 눌러 로그인합니다
+            </div>
+        </div>
+    </div>
+    <script src="/mainPage/mainPage.js"></script>
+</body>
+</html>

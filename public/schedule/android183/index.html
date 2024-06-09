@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="android-small">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <img class="back-img" src="img/backimg.svg" />
+          <div class="group-top-tap"></div>
+          <div class="text-wrapper">그룹 이름</div>
+          <div class="left-arrow-btn"></div>
+          <div class="select-bar"></div>
+          <div class="div">일정</div>
+          <div class="text-wrapper-2">체크리스트</div>
+          <div class="text-wrapper-3">캘린더</div>
+          <div class="rectangle"></div>
+          <div class="plus-icon">
+            <div class="overlap-group">
+              <div class="rectangle-2"></div>
+              <div class="rectangle-3"></div>
+            </div>
+          </div>
+          <div class="text-wrapper-4">관리</div>
+          <div class="text-wrapper-5">멤버</div>
+          <img class="line" src="img/line.svg" />
+          <div class="screen"></div>
+          <img class="group" src="img/group-102.png" />
+          <img id="x" class="x-btn" src="img/xbtn-1.svg" />
+          <div class="text-wrapper-6">일정 생성 완료!</div>
+          <div class="text-wrapper-7">그룹원들에게 투표하라고 말해보세요</div>
+          <div class="text-wrapper-8">일정 이름</div>
+          <p class="element"><span class="date-display" id="date-display1"> ~ </span><span class="date-display" id="date-display2"></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="selected-time1">--:--</span> ~ <span id="selected-time2">--:--</span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('x').addEventListener('click', function() {
+          window.location.href = '../android187/index.html';
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const dateDisplay1 = document.getElementById('date-display1');
+          // 로컬 스토리지에서 선택된 시작 날짜 불러오기
+          const selectedDate1 = localStorage.getItem('selectedDate1');
+
+          if (selectedDate1) {
+              dateDisplay1.textContent = `${selectedDate1}`;
+          } else {
+              dateDisplay1.textContent = '선택된 날짜가 없습니다.';
+          }
+      });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dateDisplay2 = document.getElementById('date-display2');
+        // 로컬 스토리지에서 선택된 끝 날짜 불러오기
+        const selectedDate2 = localStorage.getItem('selectedDate2');
+
+        if (selectedDate2) {
+            dateDisplay2.textContent = `${selectedDate2}`;
+        } else {
+            dateDisplay2.textContent = '선택된 날짜가 없습니다.';
+        }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectedTimeElement1 = document.getElementById('selected-time1');
+        const selectedHours1 = localStorage.getItem('selectedHours1');
+        const selectedMinutes1 = localStorage.getItem('selectedMinutes1');
+
+        if (selectedHours1 && selectedMinutes1) {
+            selectedTimeElement1.innerText = `${selectedHours1}:${selectedMinutes1}`;
+        } else {
+            selectedTimeElement1.innerText = '선택된 시간이 없습니다.';
+        }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectedTimeElement2 = document.getElementById('selected-time2');
+        const selectedHours2 = localStorage.getItem('selectedHours2');
+        const selectedMinutes2 = localStorage.getItem('selectedMinutes2');
+
+        if (selectedHours2 && selectedMinutes2) {
+            selectedTimeElement2.innerText = `${selectedHours2}:${selectedMinutes2}`;
+        } else {
+            selectedTimeElement2.innerText = '선택된 시간이 없습니다.';
+        }
+    });
+  </script>
+  </body>
+</html>
